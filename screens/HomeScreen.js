@@ -4,6 +4,7 @@ import { View, Image, SafeAreaView} from "react-native";
 import SearchSection from "../components/SearchSection";
 import Locations from "../components/Locations";
 import ForecastSection from "../components/ForecastSection";
+import ForecastNextDays from "../components/ForecastNextDays";
 
 export default function HomeScreen() {
   const [showSearch, setShowSearch] = useState(false);
@@ -28,6 +29,7 @@ export default function HomeScreen() {
         <SearchSection showSearch={showSearch} setShowSearch={setShowSearch} />
         <Locations showSearch={showSearch} locations={locations} />
         <ForecastSection />
+        <ForecastNextDays />
       </SafeAreaView>
     </View>
   );
