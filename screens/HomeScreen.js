@@ -3,6 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import { View, Image, SafeAreaView} from "react-native";
 import SearchSection from "../components/SearchSection";
 import Locations from "../components/Locations";
+import ForecastSection from "../components/ForecastSection";
 
 export default function HomeScreen() {
   const [showSearch, setShowSearch] = useState(false);
@@ -26,6 +27,7 @@ export default function HomeScreen() {
       <SafeAreaView className="flex flex-1 mt-16">
         <SearchSection showSearch={showSearch} setShowSearch={setShowSearch} />
         <Locations showSearch={showSearch} locations={locations} />
+        <ForecastSection />
       </SafeAreaView>
     </View>
   );
