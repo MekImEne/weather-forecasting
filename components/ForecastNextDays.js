@@ -21,7 +21,7 @@ export default function ForecastNextDays({ weather }) {
           let date = new Date(item?.date);
           let options = { weekday: "long" };
           let dayName = date.toLocaleDateString("en-US", options);
-          dayName.split(",")[0];
+          dayName = dayName.split(",")[0];
           return (
             <View
               key={index}
